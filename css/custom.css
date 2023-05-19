@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+/*--custom-css--*/
+body {
+  font-size: 14px;
+  line-height: 27px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+.container {
+  max-width: calc(100% - 5%);
+  margin: 0 auto;
+}
+
+a,
+button,
+.close-button {
+  transition: all .5s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: #12a6cb;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+a:hover,
+button:hover,
+.close-button:hover {
+  background-color: #1266cb;
+}
+
+::placeholder {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*--header--*/
+#header {
+  padding: 20px 0px;
+  background-color: #efefef;
+}
+
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header h1 {
+  margin: 0;
+  color: #12a6cb;
+}
+
+#header button {
+  font-size: 16px;
+  padding: 8px 25px;
+}
+
+/*--table--*/
+.responsive-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  margin: 30px 0px;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  min-width: 1100px;
+}
+
+table tr th,
+table tr td {
+  padding: 9px 10px;
+}
+
+table tr th {
+  border-bottom: 1px solid #ccc;
+}
+
+table tr:not(:last-child) td {
+  border-bottom: 1px solid #ccc;
+}
+
+table .form-control {
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 0;
+}
+
+table input:focus-visible,
+table input:focus {
+  outline: none;
+  border-bottom: 2px solid #12a6cb;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+  width: 120px;
+}
+
+table tr td button,
+table tr td a {
+  padding: 8px 15px;
+  min-width: 45px;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  width: 600px;
+  border-radius: 0.5rem;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modal-content h2 {
+  color: #12a6cb;
+  margin-top: 0px;
+  border-bottom: 2px solid #12a6cb;
+  padding-bottom: 13px;
+}
+
+.modal-content .form-control {
+  height: 35px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 0;
+}
+
+.modal-content input:focus-visible,
+table input:focus {
+  outline: none;
+  border-bottom: 1px solid #12a6cb;
+}
+
+.modal-content .buttons {
+  text-align: center;
+  margin: 15px 0px 10px;
+}
+
+.modal-content .buttons button {
+  font-size: 16px;
+  padding: 8px 25px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.close-button.cancel {
+  position: relative;
+  width: auto;
+  top: 0;
+  right: 0;
+}
+
+.close-button {
+  width: 40px;
+  cursor: pointer;
+  border-radius: 0px 0px 0px 20px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 35px;
+  padding: 6px 0px;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+@media(max-width:768px) {
+  .container {
+    max-width: calc(100% - 2%);
+    margin: 0 15px;
+  }
+
+  body,
+  ::placeholder {
+    font-size: 12px;
+  }
+
+  #header h1 {
+    font-size: 15px;
+  }
+
+  #header button {
+    font-size: 13px;
+    padding: 8px 20px;
+  }
+
+  .modal-content {
+    width: 250px;
+    max-height: 300px;
+  }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assessment</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+    <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+    <!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+    <!--[if !IE]><!-->
+    <script>if (/*@cc_on!@*/false) { document.documentElement.className = 'ie10'; }</script><!--<![endif]-->
+    <link rel="shortcut icon" href="./images/favicon.jpg" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <h1>Employee List</h1>
+            <button onclick="toggleModal()">Add New</a>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <div class="responsive-table">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Job Title</th>
+                            <th>Age</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><input type="text" placeholder="Search By Name" class="form-control" name="name"></td>
+                            <td>
+                                <select name="" id="" class="form-control" name="jobtitle">
+                                    <option checked>Select Job Title</option>
+                                    <option value="manager">Manager</option>
+                                    <option value="teamlead">Team Lead</option>
+                                    <option value="developer">Software Developer</option>
+                                </select>
+                            </td>
+                            <td><input type="number" placeholder="Age" class="form-control" name="age"></td>
+                            <td><input type="date" class="form-control" name="startDate"></td>
+                            <td><input type="date" class="form-control" name="endDate"></td>
+                            <td>
+                                <button><i class="fa fa-filter"></i></button>
+                                <button onClick="resetSearch()"><i class="fa fa-times"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Amit Kumar</td>
+                            <td>Manager</td>
+                            <td>33</td>
+                            <td>2018-02-21</td>
+                            <td>2019-02-21</td>
+                            <td>
+                                <button onclick="toggleModal()"><i class="fa fa-eye"></i></button>
+                                <button class="delete-row" onclick="removeRow(this)"><i class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Amit Kumar</td>
+                            <td>Manager</td>
+                            <td>33</td>
+                            <td>2018-02-21</td>
+                            <td>2019-02-21</td>
+                            <td>
+                                <button onclick="toggleModal()"><i class="fa fa-eye"></i></button>
+                                <button class="delete-row" onclick="removeRow(this)"><i class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Amit Kumar</td>
+                            <td>Manager</td>
+                            <td>33</td>
+                            <td>2018-02-21</td>
+                            <td>2019-02-21</td>
+                            <td>
+                                <button onclick="toggleModal()"><i class="fa fa-eye"></i></button>
+                                <button class="delete-row" onclick="removeRow(this)"><i class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Amit Kumar</td>
+                            <td>Manager</td>
+                            <td>33</td>
+                            <td>2018-02-21</td>
+                            <td>2019-02-21</td>
+                            <td>
+                                <button onclick="toggleModal()"><i class="fa fa-eye"></i></button>
+                                <button class="delete-row" onclick="removeRow(this)"><i class="fa fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Employee</h2>
+                <span class="close-button" onClick="toggleModal()">×</span>
+            </div>
+            <div class="content-area">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Full Name" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="" id="" class="form-control" id="jobtitle" required>
+                            <option checked>Select Job Title</option>
+                            <option value="manager">Manager</option>
+                            <option value="teamlead">Team Lead</option>
+                            <option value="developer">Software Developer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Enter Age" id="age">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" placeholder="Enter Start Date" id="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" placeholder="Enter End Date" id="endDate"required>
+                    </div>
+                    <div class="buttons">
+                        <button>Submit</button>
+                        <button onClick="toggleModal()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="./js/custom.min.js"></script>
+
+</body>
+
+</html>
